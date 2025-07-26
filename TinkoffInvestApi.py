@@ -6,7 +6,7 @@ def get_operation_payment(payment: MoneyValue):
     result = 0.0
     result += payment.units
 
-    if payment.nano < 0:
+    if payment.nano != 0:
         result += payment.nano / 1000000000
 
     return result
